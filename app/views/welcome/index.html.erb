@@ -1,0 +1,59 @@
+<% content_for :below_header do %>
+  below header
+<% end %>
+
+<%= link_to 'Signup', articles_path, class: "btn waves-effect waves-light" %>
+
+<%= link_to 'Login', articles_path, class: "btn waves-effect waves-light" %>
+
+<%= link_to 'My Blog', controller: 'articles', class: "btn waves-effect waves-light" %>
+
+<!--
+<ul>
+  <li>Welcome Page
+    <ul>
+      <li>Login</li>
+      <li>Signup</li>
+      <li>Logout</li>
+    </ul>
+  </li>
+
+  <li>Profile page
+    <ul>
+      <li>Blog</li>
+      <li>Description</li>
+      <li>Likes</li>
+      <li>Dislikes</li>
+      <li>Posts to page</li>
+      <li>A sound clip of your maniacal laughter (upload for eg a wav or mp3 file).</li>
+    </ul>
+  </li>
+
+  <li>Blog Page</li>
+    <ul>
+      <li>Leave a comment</li>
+    </ul>
+
+  <li>Admin page
+    <ul>
+      <li>View table of all blog posts.</li>
+    </ul>
+  </li>
+</ul>
+
+What does migrate do?
+What is the articles controller doing?
+What does XML do?
+What does JSON do?
+
+
+rails c = enter ruby console prompt
+rails g model tweet content:string = create new model (Add table)
+rake db:migrate = add a table
+
+rails g migration add_timestamps_to_users
+
+carrierwave = file attachments on models gem
+devise = authentication gem
+
+-->

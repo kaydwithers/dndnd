@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dungeons &amp; Dragons &amp; Dating</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="hero">
+
+    <nav class="navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">D&amp;D&amp;D</a>
+            </div>
+          </div>
+
+          <div class="col-md-4  text-center">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4">
+            <ul class="nav  nav-pills  navbar-right">
+              <li class="active"><%= link_to 'Home' %></li>
+              <li><%= link_to 'Profile', user_path(1) %></li>
+              <li><%= link_to 'Logout' %></li>
+              <li class="signup"><%= link_to 'Sign up' %></li>
+              <li><%= link_to 'Admin' %></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-container  text-center">
+      <h1><span>Dungeons <i class="amp">&amp;</i> Dragons <i>&amp;</i> Dating</span></h1>
+      <div class="center  push--top">
+        <%= link_to 'Create a profile', articles_path, class: "btn  btn-lg  btn-home" %>
+      </div>
+    </div>
+  </div>
+
+  <section class="intro  contents">
+    <div class="container">
+      <div class="row">
+
+        <h2 class="white-text  push--bottom">Date real adventurers, share stories, find love.</h2>
+        <p>No matter how evil, ugly or magical you are, there will always be someone out there for you. Neutra freegan fanny pack viral cornhole 90's meh, sartorial Marfa Austin pork belly. Fashion axe gentrify slow-carb bespoke aesthetic. Messenger bag locavore put a bird on it Etsy tilde. Intelligentsia fanny pack actually McSweeney's. Health goth +1 occupy, cray mustache Truffaut Bushwick four loko mixtape.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-users  contents">
+    <div class="container">
+      <div class="row">
+
+        <h2 class="text-center  push--bottom">Recent users</h2>
+        <div class="col-md-2">
+          <%= link_to image_tag('dusty.jpg'), controller_name %>
+          <h4 class="text-center">Dusty</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("magnus.jpg", :alt => "dusty") %>
+          <h4 class="text-center">Magnus</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("jesserini.jpg", :alt => "dusty") %>
+          <h4 class="text-center">Jesserini</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("lester.jpg", :alt => "dusty") %>
+          <h4 class="text-center">Lester</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("walder.jpg", :alt => "dusty") %>
+          <h4 class="text-center">Walder</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("haushinka.jpg", :alt => "dusty") %>
+          <h4 class="text-center">Haushinka</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-users  contents">
+    <div class="container">
+      <div class="row">
+
+        <h2 class="text-center  push--bottom">Success stories</h2>
+        <div class="col-md-2">
+          <%= link_to image_tag('dusty.jpg'), controller_name %>
+          <h4 class="text-center">Dusty</h4>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag("croissant.jpg", :alt => "croissant") %>
+          <h4 class="text-center">Tasty Croissant</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
